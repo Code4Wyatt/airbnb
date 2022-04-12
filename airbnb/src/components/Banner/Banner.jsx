@@ -1,13 +1,14 @@
 import {useState} from 'react'
 import './banner.scss'
 import { Button } from "@material-ui/core"
+import Search from "../../components/Search/Search"
 
 const Banner = () => {
     const [showSearch, setShowSearch ] = useState(false)
   return (
       <div className="banner">
           <div className="banner__search">
-              {showSearch && <h1>SHOW DATE PICKER</h1>}
+              {showSearch && <Search />}
               <Button className="banner__searchButton"variant='outlined' onClick={() => setShowSearch(!showSearch)}>Search Dates</Button>
           </div>
         <div className="banner__info">
